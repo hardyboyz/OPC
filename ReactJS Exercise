@@ -6,6 +6,7 @@ Data from state can be modified by its own component
 Data from props is read-only, and cannot be modified by a component
 
 b. What are synthetic events in React? (Provide an example)
+answer :
 synthetic events is just like event handler in javascript
 function sampleSyntheticEvents() {
   return (
