@@ -1,0 +1,25 @@
+React.js Chapter
+
+a. What is the difference between state and props?
+answer : 
+Data from state can be modified by its own component
+Data from props is read-only, and cannot be modified by a component
+
+b. What are synthetic events in React? (Provide an example)
+synthetic events is just like event handler in javascript
+function sampleSyntheticEvents() {
+  return (
+    <button
+      onClick={(e) => {
+        console.log('This Button Clicked');
+      }}
+    />
+  )
+}
+
+c.what are portals in React ?
+answer : Portal is the function that can be used to render an element outside of its parent component’s
+
+d. What will happen if you use setState in constructor?
+answer : it will rerender the components and all the children
+

@@ -1,0 +1,36 @@
+a. What�s the difference between the include() and require() functions?
+    answer : if there is an error on the code line, using include() will continue to execute to the next line until finish.
+            and if using require(), it will stop the code execution.
+
+b. How can we get the IP address of the client?
+    answer : I usually using this function to get the exact client IP address
+    function getIPAddress() {
+        $IP = '';
+        if (isset($_SERVER['REMOTE_ADDR']))
+            $IP = $_SERVER['REMOTE_ADDR'];
+        else if(isset($_SERVER['HTTP_FORWARDED']))
+            $IP = $_SERVER['HTTP_FORWARDED_FOR'];
+        else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+            $IP = $_SERVER['HTTP_FORWARDED'];
+        else if(isset($_SERVER['HTTP_CLIENT_IP']))
+            $IP = $_SERVER['HTTP_CLIENT_IP'];
+        else
+            $IP = 'x.x.x.x';
+        return $IP;
+    }
+
+c. What is the output of the following code: 
+    $a = '1';
+    $b = &$a;
+    $b = "2$b";
+    echo $a.", ".$b;
+
+    answer : 21, 21
+
+d. What are the main error types in PHP and how do they differ?
+
+    answer : 
+    1. Syntax Error     = Usually happened because of code not following syntax format.
+    2. Warning Error    = Usually when the code find the files that doesnt exists.
+    3. Notice Error     = When the code using undefined variable, it will product this error.
+    4. Fatal Error      = This is because the code call the class or function that doesnt exists.
